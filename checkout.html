@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rouge Et Noir - Formular Comandă</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles-cart.css" />
+    <script src="produse.json"></script>
+    <script src="coshandler.js"></script>
+		<script src="generatorpagini.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+  </head>
+  <body class="form-body">
+    <nav>
+      <a href="index.html"><img class="logo" src="img/logo.png" alt="" /></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="checkout.html">Cart</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="form-container">
+        <form class="form-signin" action="" method="POST">
+          <h1>Formular Comandă</h1>
+          <div class="form-group">
+            <input
+              class="form-input"
+              type="text"
+              id="name-rougeetnoir"
+              placeholder="Nume Firmă"
+              maxlength="255"
+              autofocus
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-input"
+              type="text"
+              id="cif-rougeetnoir"
+              placeholder="CIF"
+              minlength="8"
+              maxlength="64"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-input"
+              type="email"
+              id="email-rougeetnoir"
+              placeholder="Email"
+              minlength="5"
+              maxlength="255"
+            />
+          </div>
+          <button class="btn">Trimite</button>
+          <p><span>Veți primi un email cu factura fiscală</span></p>
+        </form>
+      </div>
+      <div class="cart-container">
+        <section class="cart">
+          <h2 class="heading">Produse</h2>
+          <div class="products" id="products-list">
+          <!-- END PRODUCTS -->
+          </div>
+          <div class="amount">
+            <div class="total">
+              <span>Total</span>
+              <span>LEI&nbsp;<span id="total"></span></span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

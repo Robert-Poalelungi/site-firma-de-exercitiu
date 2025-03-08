@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rouge Et Noir - Produs</title>
+    <link rel="stylesheet" href="css/styles-produs.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <script src="produse.json"></script>
+    <script src="coshandler.js"></script>
+    <script src="generatorpagini.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html"
+        ><img class="logo" src="img/logo.png" alt="" id="navIcon"
+      /></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="checkout.html">Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="alert" id="boughtAlert" hidden>
+      <span class="closebtn" onclick="this.parentElement.hidden=true;"
+        >&times;</span
+      >
+      <strong>Succes!</strong> Ați adăugat
+      <strong id="cantitateText">0</strong> produse în coș!
+    </div>
+
+    <div class="product">
+      <div class="product-img" style="padding-top: 85px">
+        <img
+          class="p-img"
+          src="img/produse/%PRODUCT_ID%.png"
+          alt=""
+          id="produs-imagine"
+        />
+      </div>
+
+      <div class="product-info">
+        <div class="product-details">
+          <h2 class="product-title" id="produs-titlu"></h2>
+          <p class="description" id="produs-descriere"></p>
+        </div>
+
+        <div class="product-int">
+          <p class="price" id="produs-pret"></p>
+          <p id="produs-cod">COD PRODUS: %COD_PRODUS%s</p>
+          <div class="custom-select, form-group">
+            <label for="">Mărime</label>
+            <select name="" id="">
+              <option value="">Selectare mărime</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </div>
+          <div class="product-quantity, form-group">
+            <label for="quantity">Cantitate</label>
+            <!-- <input id="quantity" type="number" min="1" max="100" value="1" /> -->
+            <select name="" id="quantity">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+              <option value="">7</option>
+              <option value="">8</option>
+              <option value="">9</option>
+              <option value="">10</option>
+              <option value="">11</option>
+              <option value="">12</option>
+              <option value="">13</option>
+              <option value="">14</option>
+              <option value="">15</option>
+            </select>
+          </div>
+          <div class="cart-button">
+            <button class="btn" id="buton_add_to_cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

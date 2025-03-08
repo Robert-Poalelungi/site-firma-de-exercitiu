@@ -1,0 +1,28 @@
+body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url("/img/mentenanta.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 1340px) {
+    .bg{
+    /* Full height */
+    height: 50%;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: round;
+    background-size: contain;
+    }
+}

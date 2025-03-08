@@ -1,0 +1,175 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  animation: fadeIn 0.25s;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* NAVIGARE */
+
+nav {
+  background: #000;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+.logo {
+  width: 90px;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: -10px;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+nav li {
+  margin: 0.5rem 0;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  nav li {
+    margin: 0 1rem;
+  }
+  .logo {
+    position: absolute;
+    display: block;
+    width: 50px;
+  }
+}
+
+/*ABOUT*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.box{
+  height: 100vh;
+  width: 50%;
+}
+
+.box-one {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  background-image: url(/img/about.jpg);
+  background-size: cover;
+  padding-bottom: 8rem;
+  text-shadow: 1px 1px 1px lightgray;
+  height: 100vh;
+}
+
+.mision-container, .history-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.box-two {
+  background: white;
+}
+.box-five {
+  background: black;
+}
+
+.box-six {
+  background: grey;
+  height: 100vh;
+}
+
+.box-three {
+  background-image: url(/img/box-3.jpg);
+  background-size: cover;
+}
+
+.box-four {
+  background-image: url(/img/box-4.jpg);
+  background-size: cover;
+}
+.box-six {
+  background-image: url(/img/organigrama.jpg);
+  background-size: cover;
+}
+
+.istoric-titlu {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 4em;
+  margin-left: 3.5rem;
+  color: white;
+}
+
+.istoric-continut {
+  font-size: 1.8em;
+  margin: 5rem;
+  margin-top: 10rem;
+  line-height: 1.4;
+  color: white;
+  margin-left: 30rem;
+    text-align: justify;
+}
+
+.titlu-2 {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 4em;
+  margin-right: 3.5rem;
+  color: black;
+}
+.continut-2 {
+  font-size: 1.8em;
+  margin: 5rem;
+  margin-top: 10rem;
+  line-height: 1.4;
+  color: black;
+  margin-left: 25rem;
+    text-align: justify;
+}
+
+@media screen and (max-width:1854px) {
+
+  .continut-2{
+font-size: 1.5em;
+  }
+  .istoric-continut{
+    font-size: 1.5em;
+  }
+}

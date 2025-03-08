@@ -1,0 +1,133 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  animation: fadeIn 0.25s;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+}
+
+@keyframes fadeIn{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeBorder{
+  0% {border-color: #00000000;}
+  100% {border-color: #000000FF}
+}
+
+/* NAVIGARE */
+
+nav {
+  background: #000;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: +1;
+}
+.logo {
+  width: 90px;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: -10px;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+nav li {
+  margin: 0.5rem 0;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  nav li {
+    margin: 0 1rem;
+  }
+  .logo {
+    position: absolute;
+    display: block;
+    width: 50px;
+  }
+}
+
+/*PRODUSE*/
+
+.products {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-element {
+  margin: 1rem;
+}
+
+.product-element a {
+  color: black;
+  text-decoration: none;
+}
+
+.product-element a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+
+.p-img {
+  width: 275px;
+  height: 375px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #00000000;
+  transition: border-color 0.15s;
+}
+
+.p-img:hover{
+  border-color: #000000ff;
+}
+
+.container {
+  padding: 35px 0;
+  position: relative;
+}
+.section-title {
+  text-align: center;
+  font-size: 2em;
+}
+
+@media (min-width: 1490px) {
+  .product-element {
+    -ms-flex: 0 0 19%;
+    flex: 0 0 19%;
+    max-width: 20%;
+    text-align: center;
+  }
+  .product-details {
+    text-align: justify;
+    margin: 0 12% 0 12%;
+  }
+}

@@ -1,0 +1,278 @@
+html {
+  font-size: 62.5%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  animation: fadeIn 0.25s;
+  font-size: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: white;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* NAVIGARE */
+
+nav {
+  background: #000;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+.logo {
+  width: 90px;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: -10px;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+nav li {
+  margin: 0.5rem 0;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  nav li {
+    margin: 0 1rem;
+  }
+  .logo {
+    position: absolute;
+    display: block;
+    width: 50px;
+  }
+}
+
+/*Contact*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+}
+
+
+.first-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  margin-top: 6rem;
+}
+
+.second-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+.box {
+height: 100%;
+width: 50%;
+}
+.box-two {
+  background-image: url(/img/contact.jpg);
+  background-size: cover;
+}
+
+.box-three {
+  background: url(/img/contact-2.jpg);
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .titlu-contact {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 4em;
+    margin-right: 3.5rem;
+    color: black;
+  }
+
+  .continut-contact {
+    font-size: 2em;
+    margin: 5rem;
+    margin-top: 10rem;
+    line-height: 1.4;
+    color: black;
+    margin-right: 25rem;
+    text-align: justify;
+  }
+
+  .continut-2 {
+    margin-top: -5rem;
+  }
+
+  .nume {
+    margin: 5rem;
+    font-size: 3em;
+  }
+
+  .email,
+  .telefon {
+    font-size: 1.8em;
+    margin: 5rem;
+  }
+}
+
+@media screen and (max-width: 1854px) {
+  .continut-contact {
+    font-size: 1.5em;
+  }
+
+  .nume {
+    font-size: 4rem;
+  }
+  .email,
+  .telefon {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 768px) {
+.first-container{
+  flex-direction: column;
+}
+  .second-container{
+    flex-direction: column;
+  }
+
+  .box {
+    height: 100vh;
+    width: 100vw;
+    }
+  /*TEXT*/
+
+  .titlu-contact {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 3em;
+    margin-right: 3.5rem;
+    color: black;
+  }
+  .continut-contact {
+    font-size: 1.2em;
+    line-height: 1.4;
+    color: black;
+  }
+  .continut {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .continut-1 {
+    height: 5px;
+    margin-top: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .continut-2 {
+    margin-top: 0;
+  }
+  .nume {
+    margin: 5rem;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .email,
+  .telefon {
+    font-size: 1.3em;
+    margin: 5rem;
+  }
+}
+
+/*email*/
+
+.box-four {
+  background: rgb(255, 255, 255);
+}
+.t-form{
+  display: flex;
+    justify-content: flex-start;
+    font-size: 3em;
+    margin-left: 3.5rem;
+  color: rgb(0, 0, 0);
+}
+form {
+  max-width: 420px;
+  margin: 50px auto;
+}
+.form{
+  margin-top: 10rem;
+}
+.feedback-input {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #585858;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #919191;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: #4787ff;
+  border-radius: 15px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type="submit"]:hover {
+  background: #3463ff;
+}

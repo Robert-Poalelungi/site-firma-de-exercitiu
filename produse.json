@@ -1,0 +1,269 @@
+var produse_raw = `
+	[
+		{
+			"nume":"Demo",
+			"descriere":"Demo",
+			"id": 0,
+			"pret": 0,
+			"gender": "invalid"
+		},
+		{
+			"nume":"Costum Business: The Lawyer",
+			"descriere":"Costumul The Lawyer este o piesă esențială, atemporală, în garderoba oricărui bărbat de succes. Datorită materialului de înaltă calitate din care este confecționat, el poate fi purtat cu succes în orice anotimp.",
+			"id": 1,
+			"pret": 3000,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Costum Business: The Manager",
+			"descriere":"Costumul The Manager este o piesă esențială, atemporală, în garderoba oricărui bărbat de succes. Datorită materialului de înaltă calitate din care este confecționat, el poate fi purtat cu succes în orice anotimp. ",
+			"id": 2,
+			"pret": 1900,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Costum Casual: Mahogany",
+			"descriere":"Costumul la comandă Mahogany este alegerea potrivită dacă îți dorești un costum elegant, dar cumva diferit. Realizat dintr-o stofă premium, acest costum se realizează la comandă și îl poți comanda fie online fie după o vizită pe site-ul nostru.",
+			"id": 3,
+			"pret": 1500,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Costum Business: Millenial",
+			"descriere":"Costumul The Millenial este o piesă esențială, atemporală, în garderoba oricărui bărbat de succes. Datorită materialului de înaltă calitate din care este confecționat, el poate fi purtat cu succes în orice anotimp.",
+			"id": 4,
+			"pret": 2500,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Sacou bărbați: Cannes",
+			"descriere":"O piesă esențială în garderoba oricărui bărbat, sacoul este alegerea perfectă pentru orice ținută business sau casual.",
+			"id": 5,
+			"pret": 1500,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Sacou bărbați: Negru",
+			"descriere":"O piesă esențială în garderoba oricărui bărbat, sacoul este alegerea perfectă pentru orice ținută business sau casual.",
+			"id": 6,
+			"pret": 1200,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Sacou bărbați: Puglia",
+			"descriere":"O piesă esențială în garderoba oricărui bărbat, sacoul este alegerea perfectă pentru orice ținută business sau casual.",
+			"id": 7,
+			"pret": 1800,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Sacou bărbați: Napoli",
+			"descriere":"O piesă esențială în garderoba oricărui bărbat, sacoul este alegerea perfectă pentru orice ținută business sau casual.",
+			"id": 8,
+			"pret": 2000,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Pantaloni bărbați: Bleumarin",
+			"descriere":"Acești pantaloni, disponibili într-o culoare vibrantă, sunt alegerea perfectă pentru o ținută casual reușită. Realizați din lână 100%, sunt ideali pentru orice anotimp și sunt foarte ușor de asortat.",
+			"id": 9,
+			"pret": 1500,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Pantaloni bărbați: Maro",
+			"descriere":"Acești pantaloni, disponibili într-o culoare vibrantă, sunt alegerea perfectă pentru o ținută casual reușită. Realizați din lână 100%, sunt ideali pentru orice anotimp și sunt foarte ușor de asortat.",
+			"id": 10,
+			"pret": 1200,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Pantaloni bărbați: Carouri",
+			"descriere":"Acești pantaloni, disponibili într-o culoare vibrantă, sunt alegerea perfectă pentru o ținută casual reușită. Realizați din lână 100%, sunt ideali pentru orice anotimp și sunt foarte ușor de asortat.",
+			"id": 11,
+			"pret": 1500,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Pantaloni bărbați: Olive",
+			"descriere":"Acești pantaloni, disponibili într-o culoare vibrantă, sunt alegerea perfectă pentru o ținută casual reușită. Realizați din lână 100%, sunt ideali pentru orice anotimp și sunt foarte ușor de asortat.",
+			"id": 12,
+			"pret": 1500,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Pantofi bărbați Negri din piele naturală",
+			"descriere":"Te invităm să descoperi noua ta pereche de pantofi preferată! Îți vor oferi un confort cu care probabil ești obișnuit doar la pantofii sport, în timp ce vei arăta foarte elegant.",
+			"id": 13,
+			"pret": 800,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Pantofi bărbați Olive din piele naturală",
+			"descriere":"Te invităm să descoperi noua ta pereche de pantofi preferată! Îți vor oferi un confort cu care probabil ești obișnuit doar la pantofii sport, în timp ce vei arăta foarte elegant.",
+			"id": 14,
+			"pret": 950,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Pantofi bărbați Lemn din piele naturală",
+			"descriere":"Te invităm să descoperi noua ta pereche de pantofi preferată! Îți vor oferi un confort cu care probabil ești obișnuit doar la pantofii sport, în timp ce vei arăta foarte elegant.",
+			"id": 15,
+			"pret": 1000,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Pantofi bărbați Bleu din piele naturală",
+			"descriere":"Te invităm să descoperi noua ta pereche de pantofi preferată! Îți vor oferi un confort cu care probabil ești obișnuit doar la pantofii sport, în timp ce vei arăta foarte elegant.",
+			"id": 16,
+			"pret": 900,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Curea Burgundiu din piele naturală",
+			"descriere":"Realizată din piele naturală și datorită șurubului cu care este prevăzută, poate fi ajustată pe dimensiunea potrivită.",
+			"id": 17,
+			"pret": 200,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Curea Neagră din piele naturală",
+			"descriere":"Realizată din piele naturală și datorită șurubului cu care este prevăzută, poate fi ajustată pe dimensiunea potrivită.",
+			"id": 18,
+			"pret": 200,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Butoni Negrii Onyx",
+			"descriere":"Butonii Black Onyx sunt o piesă atemporală ce nu ar trebui să lipsească din garderoba unui bărbat.",
+			"id": 19,
+			"pret": 300,
+			"gender": "barbati"
+		},
+		{
+			"nume":"Butoni Albi Perlă",
+			"descriere":"Butonii White Pearl sunt realizați manual din perlă naturală și adaugă un plus de eleganță oricărei ținute. Acești butoni sunt o piesă atemporală ce nu ar trebui să lipsească din garderoba unui bărbat.",
+			"id": 20,
+			"pret": 300,
+			"gender": "barbati"
+		},
+
+		{
+			"nume":"Rochie de Seară Coral cu Curea",
+			"descriere":"Această rochie, disponibilă într-o culoare vibrantă, este alegerea potrivită pentru o ținută casual de noapte. Culoarea ei atrage atenție și este foarte ușor de asortat!",
+			"id": 21,
+			"pret": 549,
+			"gender": "femei"
+		},
+		{
+			"nume":"Rochie de Seară Neagră cu Curea",
+			"descriere":"Această rochie, disponibilă într-o culoare închisă, este alegerea potrivită pentru o ținută casual de noapte. Culoarea ei nu atrage atenție și este foarte ușor de asortat!",
+			"id": 22,
+			"pret": 549,
+			"gender": "femei"
+		},
+		{
+			"nume":"Salopetă Elegantă Fucsia cu Fermoar",
+			"descriere":"Te invităm să descoperi noile noastre salopete îndrăznețe! Disponibile în Fucsia și Bleu, ele garantat vor atrage priviri.",
+			"id": 23,
+			"pret": 375,
+			"gender": "femei"
+		},
+		{
+			"nume":"Salopetă Elegantă Bleu cu Fermoar",
+			"descriere":"Te invităm să descoperi noile noastre salopete îndrăznețe! Disponibile in Fucsia si Bleu, ele garantat vor atrage priviri.",
+			"id": 24,
+			"pret": 375,
+			"gender": "femei"
+		},
+		{
+			"nume":"Curea Roșie cu Print de Șarpe",
+			"descriere":"Această curea este facută dintr-o piele naturală cu prinț de Șarpe pe ea. Cataramă este dreptunghiulară și argintie.",
+			"id": 25,
+			"pret": 465,
+			"gender": "femei"
+		},
+		{
+			"nume":"Curea Neagră cu Print de Șarpe",
+			"descriere":"Această curea este făcută dintr-o piele naturală cu print de Șarpe pe ea. Catarama este dreptunghiulară și argintie.",
+			"id": 26,
+			"pret": 465,
+			"gender": "femei"
+		},
+		{
+			"nume":"Sacou Casual Roz cu Buzunare",
+			"descriere":"Simplitatea sacoului casual, combinată cu o culoare îndrăzneață oferă o alegere foarte interesantă.",
+			"id": 27,
+			"pret": 635,
+			"gender": "femei"
+		},
+		{
+			"nume":"Sacou Casual Verde cu Buzunare",
+			"descriere":"Simplitatea sacoului casual, combinată cu o culoare îndrăzneață oferă o alegere foarte interesantă.",
+			"id": 28,
+			"pret": 635,
+			"gender": "femei"
+		},
+		{
+			"nume":"Sacou Casual Oranj cu Buzunare",
+			"descriere":"Simplitatea sacoului casual, combinată cu o culoare îndrăzneață oferă o alegere foarte interesantă.",
+			"id": 29,
+			"pret": 635,
+			"gender": "femei"
+		},
+		{
+			"nume":"Sacou Casual Alb cu Buzunare",
+			"descriere":"Simplitatea sacoului casual, combinată cu o culoare îndrăzneață oferă o alegere foarte interesantă.",
+			"id": 30,
+			"pret": 635,
+			"gender": "femei"
+		},
+		{
+			"nume":"Pantaloni Casual Bleu",
+			"descriere":"Simplitatea pantalonilor casual, combinată cu o culoare îndrăzneaţă oferă o alegere foarte interesantă.",
+			"id": 31,
+			"pret": 385,
+			"gender": "femei"
+		},
+		{
+			"nume":"Pantaloni Casual Olive",
+			"descriere":"Simplitatea pantalonilor casual, combinată cu o culoare îndrăzneaţă oferă o alegere foarte interesantă.",
+			"id": 32,
+			"pret": 385,
+			"gender": "femei"
+		},
+		{
+			"nume":"Pantaloni Casual Oranj",
+			"descriere":"Simplitatea pantalonilor casual, combinată cu o culoare îndrăzneață oferă o alegere foarte interesantă.",
+			"id": 33,
+			"pret": 385,
+			"gender": "femei"
+		},
+		{
+			"nume":"Pantaloni Casual Alb",
+			"descriere":"Simplitatea pantalonilor casual, combinată cu o culoare îndrăzneață oferă o alegere foarte interesantă.",
+			"id": 34,
+			"pret": 385,
+			"gender": "femei"
+		},
+		{
+			"nume":"Fustă Midi cu Imprimeu Rece",
+			"descriere":"Această fustă merge în aproape fiecare situație. Fie ea pe nuanță rece sau caldă, fusta Midi este o opțiune foarte solidă.",
+			"id": 35,
+			"pret": 275,
+			"gender": "femei"
+		},
+		{
+			"nume":"Fustă Midi cu Imprimeu Cald",
+			"descriere":"Această fustă merge în aproape fiecare situație. Fie ea pe nuanță rece sau caldă, fusta Midi este o opțiune foarte solidă.",
+			"id": 36,
+			"pret": 275,
+			"gender": "femei"
+		}
+	]`
+	
+var produse = JSON.parse(produse_raw);
+
+function get_produse(){
+	return produse;
+}
